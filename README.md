@@ -1,0 +1,3 @@
+# slstatus
+
+dwmblocks but worse
