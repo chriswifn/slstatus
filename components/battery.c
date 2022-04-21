@@ -114,7 +114,7 @@
 			return bprintf("%juh %jum", h, m);
 		}
 
-		return "n/a";
+		return "inf";
 	}
 #elif defined(__OpenBSD__)
 	#include <fcntl.h>
