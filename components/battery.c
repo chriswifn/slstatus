@@ -50,9 +50,9 @@
 			char *state;
 			char *symbol;
 		} map[] = {
-			{ "Charging",     "charging" },
-			{ "Discharging",  "discharging" },
-			{ "Full",         "full" },
+			{ "Charging",     "BAT" },
+			{ "Discharging",  "bat" },
+			{ "Full",         "BAT" },
 		};
 		size_t i;
 		char path[PATH_MAX], state[12];
@@ -70,7 +70,7 @@
 				break;
 			}
 		}
-		return (i == LEN(map)) ? "max" : map[i].symbol;
+		return (i == LEN(map)) ? "BAT" : map[i].symbol;
 	}
 
 	const char *
