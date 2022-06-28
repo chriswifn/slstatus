@@ -63,14 +63,23 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
+
 static const struct arg args[] = {
 	/* function format          argument */
-  { separator, "^c#61afef^^d^",                      NULL },
-  { run_command, "^b#61afef^^c#1f2227^%s^d^",       "sb-internet" },
-  { separator, "^c#98c397^^b#61afef^^d^",            NULL },
-  { battery_state, "^b#98c397^^c#1f2227^[%s] ",        "BAT0"},
-  { battery_perc, "%s ",                              "BAT0"},
-  { battery_remaining, "%s^d^",                      "BAT0" },
-  { separator, "^c#d19a66^^b#98c397^^d^",             NULL},
-  { datetime, "^b#d19a66^^c#1f2227^[DATE] %s^d^",          "%d.%m.%y %T" },
+    // { separator, "^c#98971a^^d^", NULL },
+    // { run_command, "^c#1f2227^^b#98971a^ %s ^d^", "sb-internet" },
+    // { separator, "^c#458588^^b#98971a^^d^", NULL },
+    // { netspeed_rx, "^c#1f2227^^b#458588^ %9s", "wlan0" },
+    // { netspeed_tx, " %9s ^d^", "wlan0"},
+    // { separator, "^c#98971a^^b#458588^^d^", NULL },
+    // { battery_state, "^c#1f2227^^b#98971a^ %s", "BAT0"},
+    // { battery_perc, " %s", "BAT0"},
+    // { battery_remaining, " %s ^d^", "BAT0" },
+    // { separator, "^c#458588^^b#98971a^^d^", NULL },
+    // { datetime, "^c#1f2227^^b#458588^ %s ^d^", "%T" },
+    { run_command, " %s", "sb-internet" },
+    { battery_state, "  %s", "BAT0"},
+    { battery_perc, " %s", "BAT0"},
+    { battery_remaining, " %s", "BAT0" },
+    { datetime, "  %s", "%T" },
 };
